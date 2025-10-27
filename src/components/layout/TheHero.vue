@@ -13,11 +13,11 @@
     <div class="decorative-circle circle-6 z-0 hidden md:block"></div>
 
     <!-- Hero Title -->
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 z-10 font-hero">
-      <span class="text-gray-800">Manage</span>
-      <span class="text-green-500">Your</span>
-      <span class="text-indigo-700">Tickets</span>
-      <span class="text-gray-600">Easily</span>
+    <h1 class="text-1xl md:text-5xl lg:text-6xl font-bold mb-6 z-10 font-hero">
+      <span class="text-gray-800 pl-3">Manage</span>
+      <span class="text-green-500 pl-1">Your</span>
+      <span class="text-indigo-700 pl-1">Tickets</span>
+      <span class="text-gray-600 pl-1">Easily</span>
     </h1>
 
     <!-- Hero Description -->

@@ -1,6 +1,6 @@
 <template>
-  <div class=" min-h-screen bg-gray-50">
-    <main class="flex-1 p-4 md:p-6">
+  <div class="flex flex-col min-h-screen max-w-[1440px] mx-auto bg-gray-50">
+    <main class="flex-1 p-6 overflow-y-auto">
       <ToastComponent />
 
       <header

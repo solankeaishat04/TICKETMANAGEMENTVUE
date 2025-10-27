@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen  max-w-[1440px]  items-center justify-center bg-gray-50 p-4 relative">
+  <div class="flex flex-col min-h-screen max-w-[1440px] items-center justify-center mx-auto bg-gray-50 p-4 relative">
     <!-- Toast -->
     <div
       v-if="toast"

@@ -1,13 +1,7 @@
 <template>
-  <div class="overflow-hidden max-w-[1440px] ">
-    
-    
-
-   
-
-      <!-- Main content -->
-      
-    <main class="flex-1 p-6 max-w-[1440px] mx-auto overflow-y-auto">
+<div class="flex flex-col min-h-screen max-w-[1440px] mx-auto bg-gray-50">
+    <!-- Main content -->
+    <main class="flex-1 p-6 overflow-y-auto">
       <div v-if="toast" class="mb-4 p-2 bg-red-200 text-red-800 rounded">
         {{ toast }}
       </div>
