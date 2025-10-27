@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gray-50 p-4 relative">
+  <div class="min-h-screen  max-w-[1440px]  items-center justify-center bg-gray-50 p-4 relative">
     <!-- Toast -->
     <div
       v-if="toast"
@@ -11,7 +11,7 @@
       {{ toast.message }}
     </div>
 
-    <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-md relative">
+    <div class="w-full max-w-md bg-white p-8 mx-auto rounded-xl shadow-md relative">
       <!-- Close Button -->
       <button
         @click="goHome"
@@ -73,6 +73,7 @@
         <router-link to="/signup" class="text-green-600 font-medium">Sign up</router-link>
       </p>
     </div>
+    <TheFooter/>
   </div>
 </template>
 
@@ -82,6 +83,7 @@ import { useRouter } from 'vue-router';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/vue/24/outline';
 import Logo from '@/components/layout/TheLogo.vue';
 import { mockAuthAPI } from '@/services/MockAuth.js';
+import TheFooter from '@/components/layout/TheFooter.vue';
 
 const router = useRouter();
 

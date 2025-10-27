@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-gray-800 text-white pt-10 pb-6 mt-12 shadow-inner">
-    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+  <footer class="bg-gray-800 max-w-[1440px]  text-white pt-10 pb-6 mt-12  shadow-inner">
+    <div class="px-4 sm:px-6 lg:px-8">
       <!-- Newsletter Section -->
       <div class="mb-8 border-b border-gray-700 pb-8">
         <h3 class="text-2xl font-bold mb-2 flex items-center">

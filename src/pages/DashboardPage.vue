@@ -1,5 +1,5 @@
 <template>
-  <div class="flex overflow-hidden max-w-[1440px] mx-auto">
+  <div class="overflow-hidden max-w-[1440px] ">
     
     
 
@@ -26,6 +26,7 @@
         <StatCard title="Resolved Tickets" :value="stats.closed" />
       </section>
     </main>
+    <TheFooter/>
   </div>
 
 </template>
@@ -35,6 +36,7 @@ import { ref, onMounted } from "vue";
 
 import StatCard from "@/components/card/StatCard.vue";
 import ticketService from "@/services/TicketService.js";
+import TheFooter from '@/components/layout/TheFooter.vue';
 
 const stats = ref({ total: 0, open: 0, closed: 0, inProgress: 0 });
 const toast = ref(null);

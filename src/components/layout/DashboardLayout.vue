@@ -14,7 +14,7 @@
 
       <!-- Page Content -->
       <main class="flex-1 p-6 overflow-y-auto">
-        <RouterView /> <!-- Child pages (Dashboard, Tickets, etc.) render here -->
+            <RouterView/><!-- Child pages (Dashboard, Tickets, etc.) render here -->
       </main>
     </div>
   </div>

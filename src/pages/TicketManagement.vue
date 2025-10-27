@@ -1,5 +1,5 @@
 <template>
-  <div class="flex min-h-screen bg-gray-50">
+  <div class=" min-h-screen bg-gray-50">
     <main class="flex-1 p-4 md:p-6">
       <ToastComponent />
 
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <!-- Delete Confirmation -->
+      
       <div
         v-if="ticketToDelete"
         class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
@@ -78,6 +78,7 @@
         </div>
       </div>
     </main>
+    <TheFooter/>
   </div>
 </template>
 
@@ -87,6 +88,7 @@ import TicketCard from "@/components/layout/TicketCard.vue";
 import TicketForm from "@/components/layout/TicketForm.vue";
 import ticketService from "@/services/TicketService.js";
 import { useToast } from "@/composables/useToast.js";
+import TheFooter from '@/components/layout/TheFooter.vue';
 
 const { showToast, ToastComponent } = useToast();
 
