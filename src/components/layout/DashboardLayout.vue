@@ -1,5 +1,5 @@
 <template>
-  <div class="flex overflow-hidden max-w-[1440px] mx-auto">
+  <div class="flex overflow-hidden max-w-[1440px] mx-auto   min-h-screen bg-gray-50">
     <!-- Sidebar -->
     <Sidebar 
       :showSidebar="showSidebar" 

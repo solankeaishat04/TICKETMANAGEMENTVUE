@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      
+      <!-- Delete Confirmation Modal -->
       <div
         v-if="ticketToDelete"
         class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
@@ -78,7 +78,8 @@
         </div>
       </div>
     </main>
-    <TheFooter/>
+
+    <TheFooter />
   </div>
 </template>
 
@@ -88,7 +89,7 @@ import TicketCard from "@/components/layout/TicketCard.vue";
 import TicketForm from "@/components/layout/TicketForm.vue";
 import ticketService from "@/services/TicketService.js";
 import { useToast } from "@/composables/useToast.js";
-import TheFooter from '@/components/layout/TheFooter.vue';
+import TheFooter from "@/components/layout/TheFooter.vue";
 
 const { showToast, ToastComponent } = useToast();
 
@@ -129,6 +130,10 @@ const handleSave = (ticket) => {
     tickets.value.unshift(ticket);
     showToast({ message: "Ticket created successfully!", type: "success" });
   }
+
+  // Notify Dashboard to refresh stats
+  window.dispatchEvent(new Event("tickets-updated"));
+
   showForm.value = false;
 };
 
@@ -137,6 +142,9 @@ const confirmDelete = async () => {
     await ticketService.deleteTicket(ticketToDelete.value.id);
     tickets.value = tickets.value.filter((t) => t.id !== ticketToDelete.value.id);
     showToast({ message: "Ticket deleted successfully.", type: "success" });
+
+    // Notify Dashboard to refresh stats
+    window.dispatchEvent(new Event("tickets-updated"));
   } catch {
     showToast({ message: "Failed to delete ticket.", type: "error" });
   } finally {
